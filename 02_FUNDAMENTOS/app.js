@@ -43,31 +43,31 @@ function normalizeExpense(raw) {
 const expenses = [
   {
     id: "e1",
-    fecha: "2024-01-15",
+    fecha: "2026-01-05",
     categoria: "comida",
     monto: 25.5,
   },
   {
     id: "e2",
-    fecha: "2024-01-20",
+    fecha: "2026-01-05",
     categoria: "transporte",
     monto: 15.0,
   },
   {
     id: "e3",
-    fecha: "2024-01-25",
+    fecha: "2026-01-05",
     categoria: "entretenimiento",
     monto: 50.0,
   },
   {
     id: "e4",
-    fecha: "2024-01-30",
+    fecha: "2026-01-05",
     categoria: "comida",
     monto: 30.0,
   },
   {
     id: "e5",
-    fecha: "2024-02-05",
+    fecha: "2026-01-05",
     categoria: "transporte",
     monto: 20.0,
   },
