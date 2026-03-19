@@ -1,0 +1,62 @@
+// ejercicio 1
+
+const numeros = [2, 4, 6, 8, 10];
+const resultado = numeros.map(x => x * 2);
+console.log(resultado);
+
+// ejercicio 2
+
+const nombres = ["ana", "luis", "marta", "pedro"];
+const nombresMayusculas = nombres.map(nombre => nombre.toUpperCase());
+console.log(nombresMayusculas);
+
+// ejercicio 3
+
+const palabrastip = ["sol", "computador", "mesa", "javascript"]; 
+const longitud = palabrastip.map(palabra => palabra.length);
+console.log(longitud);
+
+// ejercicio 4
+
+const numerostop = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; 
+const numerosPares = numerostop.filter(numero => numero % 2 === 0);
+console.log(numerosPares);
+
+// ejercicio 5
+
+const palabras = ["casa", "ventana", "sol", "computadora", "luz"]; 
+const palabrasLargas = palabras.filter(palabra => palabra.length > 5);
+console.log(palabrasLargas);
+
+// ejercicio 6
+
+const estudiantes = [
+ { nombre: "Ana", nota: 4.5 },
+ { nombre: "Luis", nota: 2.8 },
+ { nombre: "Marta", nota: 3.7 },
+ { nombre: "Carlos", nota: 2.5 }
+]; 
+const estudiantesAprobados = estudiantes.filter(estudiante => estudiante.nota >= 3.0);
+console.log(estudiantesAprobados);
+
+// ejercicio 7
+
+const numeroscin = [5, 10, 15, 20]; 
+const suma = numeroscin.reduce((acumulador, numero) => acumulador + numero, 0);
+console.log(suma);
+
+// ejercicio 8
+
+const numerostrs = [2, 3, 4]; 
+const producto = numerostrs.reduce((acumulador, numero) => acumulador * numero, 1);
+console.log(producto);
+
+// ejercicio 9
+
+const palabrasred = ["hola", "mundo", "javascript"];
+const frase = palabrasred.reduce((acumulador, palabra) => acumulador + " " + palabra);
+console.log(frase.trim());
+
+// ejercicio 10
+
+const numerosyet = [45, 12, 78, 3, 19, 1]; 
