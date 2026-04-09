@@ -60,3 +60,120 @@ console.log(frase.trim());
 // ejercicio 10
 
 const numerosyet = [45, 12, 78, 3, 19, 1]; 
+
+// ejercicio  11
+
+const numeros = [5, 2, 9, 1, 7]; // Suponiendo este arreglo anterior
+numeros.sort((a, b) => b - a);
+console.log(numeros); // [9, 7, 5, 2, 1]
+
+// ejercicio 12
+
+const nombres = ["Pedro", "Ana", "Luis", "Carlos", "Marta"];
+nombres.sort();
+console.log(nombres); // ["Ana", "Carlos", "Luis", "Marta", "Pedro"]
+
+// ejercicio 13
+
+const productos = [
+ { nombre: "Teclado", precio: 120000 },
+ { nombre: "Mouse", precio: 50000 },
+ { nombre: "Monitor", precio: 800000 },
+ { nombre: "USB", precio: 30000 }
+];
+
+productos.sort((a, b) => a.precio - b.precio);
+console.log(productos);
+
+// ejercicio 14
+
+let diaNumero = 3; // Aquí iría el valor solicitado
+let diaNombre;
+
+switch (diaNumero) {
+  case 1: diaNombre = "Lunes"; break;
+  case 2: diaNombre = "Martes"; break;
+  case 3: diaNombre = "Miércoles"; break;
+  case 4: diaNombre = "Jueves"; break;
+  case 5: diaNombre = "Viernes"; break;
+  case 6: diaNombre = "Sábado"; break;
+  case 7: diaNombre = "Domingo"; break;
+  default: diaNombre = "Día no válido";
+}
+console.log(diaNombre);
+
+// ejercicio 15
+
+let color = "verde"; // Aquí iría el valor solicitado
+
+switch (color.toLowerCase()) { // Usamos toLowerCase para que acepte "Rojo" o "rojo"
+  case "rojo": console.log("Color de alerta"); break;
+  case "verde": console.log("Color de avance"); break;
+  case "amarillo": console.log("Color de precaución"); break;
+  default: console.log("Color no reconocido");
+}
+
+// ejercicio 16
+
+let i = 1;
+while (i <= 10) {
+  console.log(`5 x ${i} = ${5 * i}`);
+  i++;
+}
+
+// ejercicio 17 
+
+let contador = 10;
+while (contador >= 1) {
+  console.log(contador);
+  contador--;
+}
+console.log("¡Despegue!");
+
+// ejercicio 18
+
+let suma = 0;
+let numeroActual = 1;
+let cantidadNumeros = 0;
+
+while (suma < 100) {
+  suma += numeroActual;
+  console.log(`Número sumado: ${numeroActual}`);
+  numeroActual++;
+  cantidadNumeros++;
+}
+
+console.log(`Suma final: ${suma}`);
+console.log(`Cantidad de números necesarios: ${cantidadNumeros}`);
+
+// ejercicio 19
+
+const numerosLista = [3, 8, 15, 20, 7, 12, 1, 30];
+
+const resultado = numerosLista
+  .filter(n => n > 10)       // Paso 1: Filtra mayores a 10
+  .map(n => n * 2);          // Paso 2: Multiplica por 2
+
+console.log(resultado); // [30, 40, 24, 60]
+
+// ejercicio 20
+
+const ventas = [
+ { producto: "Mouse", cantidad: 3, precio: 50000 },
+ { producto: "Teclado", cantidad: 2, precio: 120000 },
+ { producto: "Monitor", cantidad: 1, precio: 800000 },
+ { producto: "USB", cantidad: 5, precio: 30000 }
+];
+
+// 1, 2 y 3: Procesamiento de productos
+const productosProcesados = ventas
+  .filter(v => v.cantidad >= 2)               // Cantidad >= 2
+  .sort((a, b) => b.precio - a.precio)        // Precio mayor a menor
+  .map(v => `${v.producto} - Total: ${v.cantidad * v.precio}`); // Frase formateada
+
+console.log("Productos filtrados y ordenados:", productosProcesados);
+
+// 4. Calcular valor total de todas las ventas
+const valorTotalVentas = ventas.reduce((acc, v) => acc + (v.cantidad * v.precio), 0);
+
+console.log(`Valor total de todas las ventas: ${valorTotalVentas}`);
